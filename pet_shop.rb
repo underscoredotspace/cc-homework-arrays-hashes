@@ -70,6 +70,8 @@ def customer_can_afford_pet(customer, pet)
 end
 
 def sell_pet_to_customer(shop, pet, customer)
+  return if pet == nil
+  
   if customer_can_afford_pet(customer, pet)
     pet_cost = pet[:price]
     pet_name = pet[:name]
